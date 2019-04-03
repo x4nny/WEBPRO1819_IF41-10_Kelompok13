@@ -22,14 +22,14 @@ class Auth extends CI_Controller {
         $this->form_validation->set_rules('password2','Password','required|trim|matches[password1]');
 
         if ($this->form_validation->run() == false)
-        {
+        {	
             $data['title'] = 'Monkee';
             $this->load->view('registration', $data);
         } else {
             $data = [
-                'name' => $this->input->post('name'),
-                'email' => $this->input->post('email'),
-                'password'=> password_hash($this->input->post('password'), 
+                'name' => htmlspecialchars($this->input->post('name',true)),
+                'email' => htmlspecialchars($this->input->post('email',true)),
+                'password' => password_hash($this->input->post('password1'), 
                 PASSWORD_DEFAULT),
                 'role_id' => 2,
                 'is_active' => 1,
@@ -40,23 +40,30 @@ class Auth extends CI_Controller {
         }
     }
     public function login(){
-        $username = $this->input->post('username');
+        $email = $this->input->post('email');
 		$password = $this->input->post('password');
 		$where = array(
-			'username' => $username,
-			'password' => $password
+			'email' => $email,
+			'password' => $password,
 			);
-		$cek = $this->Userlogin_model->cek_login("login_ex",$where)->num_rows();
-		if($cek > 0){
+		$cek = $this->Userlogin_model->cek_login("user",['email'=>$email])->row_array();
+        
+        if($cek){
+            if(password_verify($password,$cek['password'])){
+                echo 'berhasil';
+            }
+            else{
+                echo 'salah';
+            }
  
-			$data_session = array(
-				'nama' => $username,
-				'status' => "login"
-				);
+		// 	$data_session = array(
+		// 		'email' => $email,
+		// 		'status' => "login"
+		// 		);
  
-			$this->session->set_userdata($data_session);
+		// 	$this->session->set_userdata($data_session);
  
-			echo 'berhasil';
+		// 	echo 'berhasil';
  
 		}else{
 			echo "Username dan password salah !";
