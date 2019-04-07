@@ -12,12 +12,12 @@ class Post extends CI_Controller {
     
 	public function index()
 	{
-		$this->load->view('login');
+		$this->load->view('post_berita');
     }
     function simpan_post(){
         $config['upload_path'] = './assets/images/'; //path folder
         $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-        $config['encrypt_name'] = TRUE; //nama yang terupload nantinya
+        $config['encrypt_name'] = TRUE; //nama yang terupload nantinya  
  
         $this->upload->initialize($config);
         if(!empty($_FILES['filefoto']['name'])){
@@ -39,21 +39,21 @@ class Post extends CI_Controller {
                 $jdl=$this->input->post('judul');
                 $berita=$this->input->post('berita');
  
-                $this->m_berita->save_post($jdl,$berita,$gambar);
-                redirect('post_berita/lists');
+                $this->post_model->save_post($jdl,$berita,$gambar);
+                redirect('post/lists');
         }else{
-            redirect('post_berita');
+            redirect('post');
         }
                       
         }else{
-            redirect('post_berita');
+            redirect('post');
         }
                  
     }
  
     function lists(){
         $x['data']=$this->post_model->get_all_berita();
-        $this->load->view('v_post_list',$x);
+        $this->load->view('post_list',$x);
     }
  
     function view(){
