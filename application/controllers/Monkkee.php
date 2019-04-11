@@ -12,7 +12,8 @@ class Monkkee extends CI_Controller {
 	{
 		$this->load->view('V_header');
 		$this->load->view('V_home');
-        // $this->load->view('V_footer1');
+		//$this->load->view('V_footer1');
+	//	$this->load->view('testing');
 	}
 
 }
