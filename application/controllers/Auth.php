@@ -12,7 +12,7 @@ class Auth extends CI_Controller {
     
 	public function index()
 	{
-		$this->load->view('login');
+		$this->load->view('testing');
     }
 
     public function registration()
@@ -24,7 +24,7 @@ class Auth extends CI_Controller {
         if ($this->form_validation->run() == false)
         {	
             $data['title'] = 'Monkee';
-            $this->load->view('registration', $data);
+            $this->load->view('registration_1', $data);
         } else {
             $data = [
                 'name' => htmlspecialchars($this->input->post('name',true)),
@@ -36,7 +36,7 @@ class Auth extends CI_Controller {
                 'date_created' => time()
             ];
             $this->db->insert('user',$data);
-            echo 'berhasil';
+            redirect('Auth');
         }
     }
     public function login(){

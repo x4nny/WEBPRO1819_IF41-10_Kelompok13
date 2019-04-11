@@ -33,7 +33,7 @@
             </div>
          </div>
       </div>
-	<!-- <form action="<?php echo base_url('auth/login'); ?>" method="post">		
+	<form action="<?php echo base_url('auth/login'); ?>" method="post">		
 		<table>  
 			<tr>
 				<td>Username</td>
@@ -48,7 +48,7 @@
 				<td><input type="submit" value="Login"></td>
 			</tr>
 		</table>
-	</form> -->
+	</form>
 </body>
 </html>
 

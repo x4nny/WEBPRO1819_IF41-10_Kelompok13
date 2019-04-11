@@ -12,7 +12,7 @@ class Post extends CI_Controller {
     
 	public function index()
 	{
-		$this->load->view('post_berita');
+		$this->load->view('posting1');
     }
     function simpan_post(){
         $config['upload_path'] = './assets/images/'; //path folder
