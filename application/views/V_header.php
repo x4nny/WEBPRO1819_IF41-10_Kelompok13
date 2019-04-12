@@ -194,6 +194,16 @@
       padding-right: 8px;
     }
 
+    .name{
+      color: #ff8200;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #D5D5D5;
+      border-bottom-width: 1px;
+
+    }
+
+
     .ctestimonials{
       background-color: #F5F5F5;
       height: 320px;
@@ -201,6 +211,12 @@
       font-size: 14px;
       padding-left: 165px;
       padding-right: 190px;
+    }
+
+
+
+    .medsos{
+      height: 120px;
     }
     header{
       background: url(assets/img/bg-headfoot.png);
@@ -211,10 +227,14 @@
     }
     footer{
       background: url(assets/img/bg-headfoot.png);
-      height: 130px;
+      height: 140px;
       width: 100%;
-      font-family: "Life Savers",cursive;
-      color: green;
+      font-family: "Open Sans",arial,sans-serif;
+      font-size: 14px;
+      color: white;
+      padding-left: 145px;
+      padding-right:250px;
+      padding-top: 40px;
 
     }
 

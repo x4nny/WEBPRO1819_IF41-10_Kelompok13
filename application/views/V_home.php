@@ -37,10 +37,10 @@
   <section class="content s-register" id="register">
     <div class="container">
       <div class="row text-white  text-center justify-content-center">
-        <div class="col-sm btn-regist">
+        <div class="col-12 btn-regist">
           <a href="#">Sign up – it’s free!</a>
         </div>
-        <div class="col-sm btn-regist">
+        <div class="col-5 btn-regist">
           <a href="#">To my account</a>
         </div>
 
@@ -151,15 +151,27 @@
     <div class="row justify-content-center  a-title">
       <div class="col-2.5">
         <img class="team-img" src="assets/img/ciwi.jpg" alt="ciwi"></img>
-        <p>Cahya</p>
-        <p>Web Development</p>
-        <a>cahya@monkkee</a>
+        <p class="text-center name">Cahya</p>
+        <p class="text-center ">
+          <a style=" color:#ff8200">Web Development</a> <br>
+          <a>cahya@monkkee.com</a>
+        </p>
       </div>
       <div class="col-2.5">
         <img class="team-img" src="assets/img/cowo.jpg" alt="cowo"></img>
+        <p class="text-center name">Daffa</p>
+        <p class="text-center ">
+          <a style=" color:#ff8200">Web Development</a> <br>
+          <a>daffa@monkkee.com</a>
+        </p>
       </div>
       <div class="col-2.5">
         <img class="team-img" src="assets/img/ciwi.jpg" alt="ciwi"></img>
+        <p class="text-center name">Maya</p>
+        <p class="text-center ">
+          <a style=" color:#ff8200">Web Development</a> <br>
+          <a>maya@monkkee.com</a>
+        </p>
       </div>
     </div>
   </div>
@@ -186,24 +198,3 @@
     </div> -->
   </div>
 </section>
-
-
-
-  <section class="content s" id="features">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm">
-          One of three columns
-        </div>
-        <div class="col-sm">
-          One of three columns
-        </div>
-        <div class="col-sm">
-          One of three columns
-        </div>
-        <div class="col-sm">
-          One of four columns
-        </div>
-      </div>
-    </div>
-  </section>
