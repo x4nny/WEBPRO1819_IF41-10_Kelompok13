@@ -1,7 +1,7 @@
 <html custom-autoscroll="custom-autoscroll" custom-document-inactivity-timeout="autoLogoutTimeoutInMillies" custom-document-inactivity="autoLogout()" custom-register-modal-dialog-factory="custom-register-modal-dialog-factory" ng-app="monkkee" ng-controller="AppCtrl" class="ng-scope"><head custom-load-custom-css="custom-load-custom-css"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
 <title custom-title="title">monkkee - the safest place for your thoughts</title>
 <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Life+Savers:400,700|Playfair+Display:400italic">
-<link rel="stylesheet" media="all" href="<?= base_url();?>assets/application-f8c5915810c4a1a465b0b0a2b7b1f7b5d6062d3052272c8c219405f6946bbf24.css">
+<link rel="stylesheet" media="all" href="<?= base_url();?>/assets/application-f8c5915810c4a1a465b0b0a2b7b1f7b5d6062d3052272c8c219405f6946bbf24.css">
 <script type="text/javascript">
   //<![CDATA[
     MONKKEE_APP_CONSTANTS = {
@@ -16,9 +16,9 @@
     }
   //]]>
 </script>
-<script src="<?= base_url();?>assets/application-ebceaac41b00a1306e722f12198b4e49247602abfb8f10009615eb773621fcc4.js"></script>
+<script src="/assets/application-ebceaac41b00a1306e722f12198b4e49247602abfb8f10009615eb773621fcc4.js"></script>
 <meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="DKc8gD8mzv/Tpsfr1s49odEbkpjaYjyFikg+jbsCzOoQjgW8IPfIfug9TYM6eqIfkiyJh7vuvm6GFBtozKyrWQ==">
+<meta name="csrf-token" content="hpDh+8wWRBW7AXwy4Ej/HG7ciVdbSPXN8KeWRQqfnD2audjH08dClICa9loM/GCiLeuSSDrEdyb8+7OgfTH7jg==">
 <meta content="width=device-width" name="viewport">
 <!--[if lt IE 9]>
 <script type="text/javascript">
@@ -52,12 +52,16 @@
 #cke_editable span.cke_combo__font { display: none; }
 #cke_editable span.cke_combo__fontsize { display: none; }
 #cke_editable span.cke_toolbar:nth-of-type(4) { display: none; }
-</style></head>
+body{height:100%;margin:0;padding:0;background-color:#333;background-image:url(<?= base_url();?>assets/dark_stripes_bg-a96b18c9fa271f9d8183fd4f4dd94cdcb6872b6fc2b029b79576ed1b6d3d2964.png)}
+footer .edge{background-image:url(<?= base_url();?>assets/dark_stripes_with_edge_bg-d617085f363420feef4fd9362a432af99b4f33c52b5addebfa0e9560ee328def.png);height:6px}
+.auto-width{width:auto}[class^="icon-"],[class*=" icon-"]{width:29px;height:29px;line-height:30px;vertical-align:middle;background-image:url(<?=base_url();?>assets/icons_dark-52be30391833c02e12c7f511dd9398668deb7507b189fb728b796d2677075f47.png);background-position:30px 30px;display:inline-block;background-repeat:no-repeat;margin-top:1px}
+.dropdown-submenu:focus>a>[class*=" icon-"]{background-image:url(<?=base_url();?>assets/icons_dark-52be30391833c02e12c7f511dd9398668deb7507b189fb728b796d2677075f47.png)}
+</style><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/config.js?t=J2RL"></script><link rel="stylesheet" type="text/css" href="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/skins/moono/editor.css?t=J2RL"><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/lang/en.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/styles.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/autosave/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/close/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/link/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/moreorless/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/savetoggle/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/simplemaximize/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/close/lang/en.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/simplemaximize/lang/en.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/link/lang/en.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/savetoggle/lang/en.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/moreorless/lang/en.js?t=J2RL"></script></head>
 <body ng-class="bodyClass" class="desktop">
 <header class="clearfix">
 <div class="logo">
 <a ng-href="#/entries" href="#/entries">
-<img alt="Logo" src="/assets/logo-f0892a4a253a67a010b482174e0e4a9f3d95eccc89e4c73422f09d6168df6b6b.png">
+<img alt="Logo" src="<?= base_url();?>/assets/logo-f0892a4a253a67a010b482174e0e4a9f3d95eccc89e4c73422f09d6168df6b6b.png">
 <span id="logo-font"><span id="monkkee-monk">monk</span><span id="monkkee-kee">kee</span>
 </span>
 </a>
@@ -93,7 +97,7 @@ Logout
 <input ng-change="selectOrUnselectAll()" ng-model="model.allChecked" title="Select all" type="checkbox" class="ng-pristine ng-valid">
 </span>
 <div class="btn-toolbar">
-<a class="btn btn-primary" href="javascript:void(0)" id="create-entry" ng-click="createEntry()" title="Create an entry">
+<a class="btn btn-primary" href="<?= base_url();?>post/click" id="create-entry" ng-click="createEntry()" title="Create an entry">
 <i class="icon-plus"></i>
 </a>
 <a class="btn btn-primary disabled" href="javascript:void(0)" id="delete-entries" ng-class="disabledClassIfEmpty(selectedIds)" ng-click="deleteEntries()" title="Delete selected entries">
@@ -127,149 +131,7 @@ Logout
 <div class="content-wrapper">
 <div class="content">
 <div class="entries">
-<!-- ngRepeat: monthData in months --><div class="div ng-scope" ng-repeat="monthData in months">
-<div class="month-separator ng-hide" ng-hide="hideFirstSeparator &amp;&amp; $first">
-<div class="month ng-binding">
-April
-</div>
-<div class="horizontal-ruler"></div>
-<div class="year ng-binding">
-2019
-</div>
-</div>
-<!-- ngRepeat: entry in monthData.entries --><div class="entry-container clearfix ng-scope" ng-repeat="entry in monthData.entries">
-<div class="checkbox-datetime-wrapper">
-<div class="checkbox-wrapper">
-<input ng-change="updateSelectionState()" ng-model="model.checked[entry.id]" type="checkbox" class="ng-pristine ng-valid">
-</div>
-<div class="calendar-date" ng-attr-title="{{entry.fullDate}}" title="Tue, 9 Apr. 2019 08:18 PM">
-<div class="day ng-binding">
-09
-</div>
-<div class="month ng-binding">
-Apr
-</div>
-<div class="time ng-binding">
-08:18 PM
-</div>
-</div>
-<div class="full-date ng-binding">
-Tue, 9 Apr. 2019 08:18 PM
-</div>
-</div>
-<a class="entry" href="#/entries/1076328">
-<div class="empty-content">
-<div class="title ng-binding ng-hide" ng-bind-html="entry.title" ng-show="entry.title"></div>
-<div class="body ng-binding" ng-bind-html="entry.body">No content</div>
-</div>
-<span class="tags ng-hide" ng-show="entry.tags.length > 0">
-Tags:
-<!-- ngRepeat: tag in entry.tags -->
-</span>
-</a>
-</div><!-- end ngRepeat: entry in monthData.entries -->
-</div><!-- end ngRepeat: monthData in months --><div class="div ng-scope" ng-repeat="monthData in months">
-<div class="month-separator" ng-hide="hideFirstSeparator &amp;&amp; $first">
-<div class="month ng-binding">
-March
-</div>
-<div class="horizontal-ruler"></div>
-<div class="year ng-binding">
-2019
-</div>
-</div>
-<!-- ngRepeat: entry in monthData.entries --><div class="entry-container clearfix ng-scope" ng-repeat="entry in monthData.entries">
-<div class="checkbox-datetime-wrapper">
-<div class="checkbox-wrapper">
-<input ng-change="updateSelectionState()" ng-model="model.checked[entry.id]" type="checkbox" class="ng-pristine ng-valid">
-</div>
-<div class="calendar-date" ng-attr-title="{{entry.fullDate}}" title="Fri, 29 Mar. 2019 02:37 PM">
-<div class="day ng-binding">
-29
-</div>
-<div class="month ng-binding">
-Mar
-</div>
-<div class="time ng-binding">
-02:37 PM
-</div>
-</div>
-<div class="full-date ng-binding">
-Fri, 29 Mar. 2019 02:37 PM
-</div>
-</div>
-<a class="entry" href="#/entries/1064524">
-<div class="">
-<div class="title ng-binding ng-hide" ng-bind-html="entry.title" ng-show="entry.title"></div>
-<div class="body ng-binding" ng-bind-html="entry.body">asdasadsasdasdadsasdasd</div>
-</div>
-<span class="tags ng-hide" ng-show="entry.tags.length > 0">
-Tags:
-<!-- ngRepeat: tag in entry.tags -->
-</span>
-</a>
-</div><!-- end ngRepeat: entry in monthData.entries --><div class="entry-container clearfix ng-scope" ng-repeat="entry in monthData.entries">
-<div class="checkbox-datetime-wrapper">
-<div class="checkbox-wrapper">
-<input ng-change="updateSelectionState()" ng-model="model.checked[entry.id]" type="checkbox" class="ng-pristine ng-valid">
-</div>
-<div class="calendar-date" ng-attr-title="{{entry.fullDate}}" title="Sun, 24 Mar. 2019 03:32 PM">
-<div class="day ng-binding">
-24
-</div>
-<div class="month ng-binding">
-Mar
-</div>
-<div class="time ng-binding">
-03:32 PM
-</div>
-</div>
-<div class="full-date ng-binding">
-Sun, 24 Mar. 2019 03:32 PM
-</div>
-</div>
-<a class="entry" href="#/entries/1059035">
-<div class="">
-<div class="title ng-binding ng-hide" ng-bind-html="entry.title" ng-show="entry.title"></div>
-<div class="body ng-binding" ng-bind-html="entry.body">lmao</div>
-</div>
-<span class="tags ng-hide" ng-show="entry.tags.length > 0">
-Tags:
-<!-- ngRepeat: tag in entry.tags -->
-</span>
-</a>
-</div><!-- end ngRepeat: entry in monthData.entries --><div class="entry-container clearfix ng-scope" ng-repeat="entry in monthData.entries">
-<div class="checkbox-datetime-wrapper">
-<div class="checkbox-wrapper">
-<input ng-change="updateSelectionState()" ng-model="model.checked[entry.id]" type="checkbox" class="ng-pristine ng-valid">
-</div>
-<div class="calendar-date" ng-attr-title="{{entry.fullDate}}" title="Sun, 24 Mar. 2019 03:32 PM">
-<div class="day ng-binding">
-24
-</div>
-<div class="month ng-binding">
-Mar
-</div>
-<div class="time ng-binding">
-03:32 PM
-</div>
-</div>
-<div class="full-date ng-binding">
-Sun, 24 Mar. 2019 03:32 PM
-</div>
-</div>
-<a class="entry" href="#/entries/1059034">
-<div class="">
-<div class="title ng-binding" ng-bind-html="entry.title" ng-show="entry.title">Welcome to monkkee!</div>
-<div class="body ng-binding" ng-bind-html="entry.body">We wish you a great time with monkkee! If you need help, use the link to the support page or the FAQs at the bottom of the page.    Regards  Your monkkee team</div>
-</div>
-<span class="tags ng-hide" ng-show="entry.tags.length > 0">
-Tags:
-<!-- ngRepeat: tag in entry.tags -->
-</span>
-</a>
-</div><!-- end ngRepeat: entry in monthData.entries -->
-</div><!-- end ngRepeat: monthData in months -->
+<!-- ngRepeat: monthData in months -->
 <div class="load-more ng-hide" ng-show="loadMoreVisible">
 <button class="btn btn-primary" ng-click="loadMore()">
 <div class="btn-text-content">Load more</div>
@@ -278,7 +140,7 @@ Tags:
 <div class="btn-text-content">Load all</div>
 </button>
 </div>
-<div class="none centered ng-hide" ng-show="noneMsgVisible">No entries found</div>
+<div class="none centered" ng-show="noneMsgVisible">No entries found</div>
 </div>
 </div>
 </div>
@@ -372,8 +234,8 @@ Loading<span id="dots"><span class="dot" id="dot1">.</span><span class="dot" id=
 </div>
 </div>
 
-<script src="<?= base_url();?>assets/ckeditor.js"></script>
-<script src="<?= base_url();?>assets/a.js"></script>
+<script src="/javascripts/ckeditor-4.5.7-mnk4/ckeditor.js"></script>
+<script src="/assets/footer_scripts-c365c106e29792cd3b5608d34958cc9d3eb025976648c370a5b23913b3f510b3.js"></script>
 
 
-<div class="datepicker dropdown-menu"><div class="datepicker-days datepicker-mode" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">April 2019</th><th class="next">›</th></tr><tr><th class="dow">Mon</th><th class="dow">Tue</th><th class="dow">Wed</th><th class="dow">Thu</th><th class="dow">Fri</th><th class="dow">Sat</th><th class="dow">Sun</th></tr></thead><tbody><tr><td class="day old disabled">25</td><td class="day old disabled">26</td><td class="day old disabled">27</td><td class="day old disabled">28</td><td class="day old enabled">29</td><td class="day old disabled">30</td><td class="day old disabled">31</td></tr><tr><td class="day disabled">1</td><td class="day disabled">2</td><td class="day disabled">3</td><td class="day disabled">4</td><td class="day disabled">5</td><td class="day disabled">6</td><td class="day disabled">7</td></tr><tr><td class="day disabled">8</td><td class="day enabled">9</td><td class="day disabled">10</td><td class="day active disabled">11</td><td class="day disabled">12</td><td class="day disabled">13</td><td class="day disabled">14</td></tr><tr><td class="day disabled">15</td><td class="day disabled">16</td><td class="day disabled">17</td><td class="day disabled">18</td><td class="day disabled">19</td><td class="day disabled">20</td><td class="day disabled">21</td></tr><tr><td class="day disabled">22</td><td class="day disabled">23</td><td class="day disabled">24</td><td class="day disabled">25</td><td class="day disabled">26</td><td class="day disabled">27</td><td class="day disabled">28</td></tr><tr><td class="day disabled">29</td><td class="day disabled">30</td><td class="day new disabled">1</td><td class="day new disabled">2</td><td class="day new disabled">3</td><td class="day new disabled">4</td><td class="day new disabled">5</td></tr></tbody></table></div><div class="datepicker-months datepicker-mode" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month">Jan.</span><span class="month">Feb.</span><span class="month">Mar.</span><span class="month active">Apr.</span><span class="month">May</span><span class="month">Jun.</span><span class="month">Jul.</span><span class="month">Aug.</span><span class="month">Sep.</span><span class="month">Oct.</span><span class="month">Nov.</span><span class="month">Dec.</span></td></tr></tbody></table></div><div class="datepicker-years datepicker-mode" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year active">2019</span><span class="year old">2020</span></td></tr></tbody></table></div><div class="datepicker-close"><a href="#">Close</a></div></div></body></html>
+<div class="datepicker dropdown-menu"><div class="datepicker-days datepicker-mode" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">April 2019</th><th class="next">›</th></tr><tr><th class="dow">Mon</th><th class="dow">Tue</th><th class="dow">Wed</th><th class="dow">Thu</th><th class="dow">Fri</th><th class="dow">Sat</th><th class="dow">Sun</th></tr></thead><tbody><tr><td class="day old disabled">25</td><td class="day old disabled">26</td><td class="day old disabled">27</td><td class="day old disabled">28</td><td class="day old disabled">29</td><td class="day old disabled">30</td><td class="day old disabled">31</td></tr><tr><td class="day disabled">1</td><td class="day disabled">2</td><td class="day disabled">3</td><td class="day disabled">4</td><td class="day disabled">5</td><td class="day disabled">6</td><td class="day disabled">7</td></tr><tr><td class="day disabled">8</td><td class="day disabled">9</td><td class="day disabled">10</td><td class="day disabled">11</td><td class="day disabled">12</td><td class="day disabled">13</td><td class="day disabled">14</td></tr><tr><td class="day disabled">15</td><td class="day disabled">16</td><td class="day disabled">17</td><td class="day disabled">18</td><td class="day disabled">19</td><td class="day disabled">20</td><td class="day active disabled">21</td></tr><tr><td class="day disabled">22</td><td class="day disabled">23</td><td class="day disabled">24</td><td class="day disabled">25</td><td class="day disabled">26</td><td class="day disabled">27</td><td class="day disabled">28</td></tr><tr><td class="day disabled">29</td><td class="day disabled">30</td><td class="day new disabled">1</td><td class="day new disabled">2</td><td class="day new disabled">3</td><td class="day new disabled">4</td><td class="day new disabled">5</td></tr></tbody></table></div><div class="datepicker-months datepicker-mode" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="month">Jan.</span><span class="month">Feb.</span><span class="month">Mar.</span><span class="month active">Apr.</span><span class="month">May</span><span class="month">Jun.</span><span class="month">Jul.</span><span class="month">Aug.</span><span class="month">Sep.</span><span class="month">Oct.</span><span class="month">Nov.</span><span class="month">Dec.</span></td></tr></tbody></table></div><div class="datepicker-years datepicker-mode" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev">‹</th><th colspan="5" class="switch">2010-2019</th><th class="next">›</th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year active">2019</span><span class="year old">2020</span></td></tr></tbody></table></div><div class="datepicker-close"><a href="#">Close</a></div></div></body></html>

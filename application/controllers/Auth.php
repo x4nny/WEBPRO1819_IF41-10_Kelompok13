@@ -12,7 +12,14 @@ class Auth extends CI_Controller {
     
 	public function index()
 	{
-		$this->load->view('testing');
+        $this->form_validation->set_rules('email','Email','trim|required|valid_email');
+        $this->form_validation->set_rules('password','Password','trim|required');
+
+        if($this->form_validation->run()==false){
+            $this->load->view('testing');
+        }else{
+            $this->_login();
+        }
     }
 
     public function registration()
@@ -39,7 +46,7 @@ class Auth extends CI_Controller {
             redirect('Auth');
         }
     }
-    public function login(){
+    private function _login(){
         $email = $this->input->post('email');
 		$password = $this->input->post('password');
 		$where = array(
@@ -50,24 +57,28 @@ class Auth extends CI_Controller {
         
         if($cek){
             if(password_verify($password,$cek['password'])){
-                echo 'berhasil';
+                $data = [
+                    'email' => $user['email'],
+                    'role_id'=> $user['role_id'],
+                    'id'=>$user['id']
+                ];
+                $this->session->set_userdata($data);
+                redirect('post');
+            }else{
+                $this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">Wrong password!</div>');
+                redirect('Auth');
             }
-            else{
-                echo 'salah';
-            }
- 
-		// 	$data_session = array(
-		// 		'email' => $email,
-		// 		'status' => "login"
-		// 		);
- 
-		// 	$this->session->set_userdata($data_session);
- 
-		// 	echo 'berhasil';
  
 		}else{
-			echo "Username dan password salah !";
+            $this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">Email is not registered!</div>');
+            redirect('Auth');
 		}
 	}
-    
+    public function logout(){
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('role_id');
+
+        $this->session->set_flashdata('message','<div class="alert alert-success" role="alert">You have been logged out!</div>');
+            redirect('auth');
+    }
 }

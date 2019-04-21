@@ -12,7 +12,7 @@ class Post extends CI_Controller {
     
 	public function index()
 	{
-		$this->load->view('posting1');
+		$this->load->view('posting2');
     }
     function simpan_post(){
         $config['upload_path'] = './assets/images/'; //path folder
@@ -36,11 +36,13 @@ class Post extends CI_Controller {
                 $this->image_lib->resize();
  
                 $gambar=$gbr['file_name'];
+                $data['user']=$this->db->get_where('user',['email' => $this->session->userdata('email')])->row_array();
+                $id=$data['user']['id'];
                 $jdl=$this->input->post('judul');
                 $berita=$this->input->post('berita');
  
-                $this->post_model->save_post($jdl,$berita,$gambar);
-                redirect('post/lists');
+                $this->post_model->save_post($berita,$id,$gambar);
+                echo('success');
         }else{
             redirect('post');
         }
@@ -60,6 +62,9 @@ class Post extends CI_Controller {
         $kode=$this->uri->segment(3);
         $x['data']=$this->post_model->get_berita_by_kode($kode);
         $this->load->view('v_post_view',$x);
+    }
+    function click(){
+        $this->load->view('posting2');
     }
  
 }

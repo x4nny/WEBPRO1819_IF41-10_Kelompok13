@@ -42,7 +42,7 @@
 <div class="form-group">
 <label class="control-label col-sm-2" for="registration_email">Email</label>
 <div class="col-sm-4">
-<input class="form-control" autocomplete="off" type="text" name="email" id="registration_email">
+<input class="form-control" autocomplete="off" type="text" name="email" id="registration_email" value="<?= set_value('email');?>">
 <?= form_error('email','<small class="text-danger pl-3">','</small>');?>
 <div class="help-block"></div>
 </div>
