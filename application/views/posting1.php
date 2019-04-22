@@ -2,6 +2,12 @@
 <title custom-title="title">monkkee - the safest place for your thoughts</title>
 <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Life+Savers:400,700|Playfair+Display:400italic">
 <link rel="stylesheet" media="all" href="<?= base_url();?>/assets/application-f8c5915810c4a1a465b0b0a2b7b1f7b5d6062d3052272c8c219405f6946bbf24.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 <script type="text/javascript">
   //<![CDATA[
     MONKKEE_APP_CONSTANTS = {
@@ -56,12 +62,15 @@ body{height:100%;margin:0;padding:0;background-color:#333;background-image:url(<
 footer .edge{background-image:url(<?= base_url();?>assets/dark_stripes_with_edge_bg-d617085f363420feef4fd9362a432af99b4f33c52b5addebfa0e9560ee328def.png);height:6px}
 .auto-width{width:auto}[class^="icon-"],[class*=" icon-"]{width:29px;height:29px;line-height:30px;vertical-align:middle;background-image:url(<?=base_url();?>assets/icons_dark-52be30391833c02e12c7f511dd9398668deb7507b189fb728b796d2677075f47.png);background-position:30px 30px;display:inline-block;background-repeat:no-repeat;margin-top:1px}
 .dropdown-submenu:focus>a>[class*=" icon-"]{background-image:url(<?=base_url();?>assets/icons_dark-52be30391833c02e12c7f511dd9398668deb7507b189fb728b796d2677075f47.png)}
+.icon-cog{background-position:-115px -27px}
+.icon-off{background-position:-175px 3px}.icon-plus{background-position:-25px -27px}.icon-trash{background-position:5px -27px}.icon-print{background-position:-55px -27px}
+.icon-tag{background-position:-25px 3px}.icon-search{background-position:-55px 3px}.icon-home{background-position:-85px -27px}.icon-cog{background-position:-115px -27px}.icon-calendar{background-position:5px 3px}.icon-news{background-position:-205px 3px}
 </style><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/config.js?t=J2RL"></script><link rel="stylesheet" type="text/css" href="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/skins/moono/editor.css?t=J2RL"><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/lang/en.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/styles.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/autosave/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/close/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/link/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/moreorless/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/savetoggle/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/simplemaximize/plugin.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/close/lang/en.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/simplemaximize/lang/en.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/link/lang/en.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/savetoggle/lang/en.js?t=J2RL"></script><script type="text/javascript" src="https://my.monkkee.com/javascripts/ckeditor-4.5.7-mnk4/plugins/moreorless/lang/en.js?t=J2RL"></script></head>
 <body ng-class="bodyClass" class="desktop">
 <header class="clearfix">
 <div class="logo">
 <a ng-href="#/entries" href="#/entries">
-<img alt="Logo" src="<?= base_url();?>/assets/logo-f0892a4a253a67a010b482174e0e4a9f3d95eccc89e4c73422f09d6168df6b6b.png">
+<img alt="Logo" src="<?= base_url();?>/assets/logo.png">
 <span id="logo-font"><span id="monkkee-monk">monk</span><span id="monkkee-kee">kee</span>
 </span>
 </a>
@@ -74,12 +83,13 @@ footer .edge{background-image:url(<?= base_url();?>assets/dark_stripes_with_edge
 </div>
 
 </div>
+<form action="<?=base_url();?>auth/logout" method="post">
 <div ng-show="loggedIn" class="ng-scope">
-<a class="user-menu-btn" href="#/settings/locale">
+<a class="user-menu-btn" href="<?=base_url();?>Monkkee/language">
 <i class="icon-cog icon-light"></i>
 Settings
 </a>
-<button class="user-menu-btn" ng-click="logout($event)">
+<button class="user-menu-btn" ng-click="logout($event)" ></form>
 <i class="icon-off icon-light"></i>
 Logout
 </button>
@@ -100,7 +110,7 @@ Logout
 <a class="btn btn-primary" href="<?= base_url();?>post/click" id="create-entry" ng-click="createEntry()" title="Create an entry">
 <i class="icon-plus"></i>
 </a>
-<a class="btn btn-primary disabled" href="javascript:void(0)" id="delete-entries" ng-class="disabledClassIfEmpty(selectedIds)" ng-click="deleteEntries()" title="Delete selected entries">
+<a class="btn btn-primary" href="<?= base_url();?>post/delete" id="delete-entries" ng-class="disabledClassIfEmpty(selectedIds)" ng-click="deleteEntries()" title="Delete selected entries">
 <i class="icon-trash"></i>
 </a>
 <a class="btn btn-primary disabled" href="javascript:void(0)" ng-class="disabledClassIfEmpty(selectedIds)" ng-click="printEntries()" title="Print selected entries">
@@ -131,6 +141,13 @@ Logout
 <div class="content-wrapper">
 <div class="content">
 <div class="entries">
+<?= $this->session->flashdata('flash');?>
+  <ul class="list-group" type="checkbox">
+  <?php foreach($post as $p) : ?>
+  <li class="list-group-item"><input type="checkbox"> <?=$p['date']?> | <?=$p['content']?><a href="<?=base_url();?>post/delete/<?=$p['post_id'];?>" class="badge badge-danger float-right">delete</a><a href="<?=base_url();?>post/edit/<?=$p['post_id'];?>" class="badge badge-warning float-right">edit</a></li>
+  <?php endforeach;?>
+  </ul>
+
 <!-- ngRepeat: monthData in months -->
 <div class="load-more ng-hide" ng-show="loadMoreVisible">
 <button class="btn btn-primary" ng-click="loadMore()">
@@ -140,7 +157,7 @@ Logout
 <div class="btn-text-content">Load all</div>
 </button>
 </div>
-<div class="none centered" ng-show="noneMsgVisible">No entries found</div>
+<div class="none centered" ng-show="noneMsgVisible"></div>
 </div>
 </div>
 </div>

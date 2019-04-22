@@ -40,7 +40,7 @@ footer .edge{background-image:url(<?= base_url();?>assets/dark_stripes_with_edge
 <header class="clearfix">
 <div class="logo">
 <a ng-href="#/" href="#/">
-<img alt="Logo" src="<?= base_url();?>assets/logo-f0892a4a253a67a010b482174e0e4a9f3d95eccc89e4c73422f09d6168df6b6b.png">
+<img alt="Logo" src="<?= base_url();?>assets/logo.png">
 <span id="logo-font"><span id="monkkee-monk">monk</span><span id="monkkee-kee">kee</span>
 </span>
 </a>

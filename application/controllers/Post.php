@@ -8,11 +8,13 @@ class Post extends CI_Controller {
         parent::__construct();
         $this->load->library('upload');
         $this->load->model('post_model');
+        $this->load->library('form_validation');
     }
     
 	public function index()
 	{
-		$this->load->view('posting2');
+        $data['post'] = $this->post_model->get_all();
+		$this->load->view('posting1',$data);
     }
     function simpan_post(){
         $config['upload_path'] = './assets/images/'; //path folder
@@ -42,7 +44,8 @@ class Post extends CI_Controller {
                 $berita=$this->input->post('berita');
  
                 $this->post_model->save_post($berita,$id,$gambar);
-                echo('success');
+                $this->session->set_flashdata('flash','<div class="alert alert-success" role="alert">Berhasil ditambah</div>');
+                redirect('post');
         }else{
             redirect('post');
         }
@@ -65,6 +68,24 @@ class Post extends CI_Controller {
     }
     function click(){
         $this->load->view('posting2');
+    }
+    function delete($id){
+        $this->post_model->delete_post($id);
+        $this->session->set_flashdata('flash','<div class="alert alert-success" role="alert">Berhasil Dihapus</div>');
+        redirect('post');
+    }
+    function edit($id){
+        $data['post'] = $this->post_model->get_post($id);
+
+		$this->form_validation->set_rules('post','Post','trim');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('posting3', $data);
+		}
+		else{
+			$this->post_model->edit_post();
+			$this->session->set_flashdata('flash','<div class="alert alert-success" role="alert">Berhasil Diubah</div>');
+			redirect('post');
+		}
     }
  
 }

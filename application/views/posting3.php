@@ -159,8 +159,9 @@ Change
 <div class="content">
 <div class="clearfix focus" id="editable-wrapper" ng-class="model.additionalWrapperClass">
 <div id="click-to-edit" ng-show="model.clickToEditVisible" class="ng-hide">Click to edit</div>
-<form action="<?php echo base_url().'post/simpan_post'?>" method="post" enctype="multipart/form-data">
-                <textarea id="ckeditor" name="berita" class="form-control" required></textarea><br/>
+<form action="" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="post_id" value="<?= $post['post_id'];?>">
+                <textarea id="ckeditor" name="post" class="form-control" required></textarea><br/>
                 <input type="file" name="filefoto" ><br>
                 <button class="btn btn-primary btn-lg" type="submit">Save</button>
             </form>

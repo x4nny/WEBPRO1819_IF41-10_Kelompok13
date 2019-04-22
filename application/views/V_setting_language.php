@@ -3,11 +3,18 @@
     <style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}
     </style>
     <title custom-title="title">settings - language</title>
-
+    
     <!--insert font dan css-->
     <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Life+Savers:400,700|Playfair+Display:400italic">
     <link rel="stylesheet" type="text/css"  href="<?= base_url();?>assets/setting.css">
-
+    <style id="custom-css">body{height:100%;margin:0;padding:0;background-color:#333;background-image:url(<?= base_url();?>assets/dark_stripes_bg-a96b18c9fa271f9d8183fd4f4dd94cdcb6872b6fc2b029b79576ed1b6d3d2964.png)}
+footer .edge{background-image:url(<?= base_url();?>assets/dark_stripes_with_edge_bg-d617085f363420feef4fd9362a432af99b4f33c52b5addebfa0e9560ee328def.png);height:6px}
+.auto-width{width:auto}[class^="icon-"],[class*=" icon-"]{width:29px;height:29px;line-height:30px;vertical-align:middle;background-image:url(<?=base_url();?>assets/icons_dark-52be30391833c02e12c7f511dd9398668deb7507b189fb728b796d2677075f47.png);background-position:30px 30px;display:inline-block;background-repeat:no-repeat;margin-top:1px}
+.dropdown-submenu:focus>a>[class*=" icon-"]{background-image:url(<?=base_url();?>assets/icons_dark-52be30391833c02e12c7f511dd9398668deb7507b189fb728b796d2677075f47.png)}
+.icon-cog{background-position:-115px -27px}
+.icon-off{background-position:-175px 3px}.icon-plus{background-position:-25px -27px}.icon-trash{background-position:5px -27px}.icon-print{background-position:-55px -27px}
+.icon-tag{background-position:-25px 3px}.icon-search{background-position:-55px 3px}.icon-home{background-position:-85px -27px}.icon-cog{background-position:-115px -27px}.icon-calendar{background-position:5px 3px}.icon-news{background-position:-205px 3px}
+</style>
 
   </head>
 
@@ -23,8 +30,9 @@
           </span>
           </a>
         </div>
+        <form action="<?=base_url();?>auth/logout" method="post">
         <div class="pull-right user-menu">
-          <a class="user-menu-btn" href="#">
+          <a class="user-menu-btn" href="<?=base_url();?>Monkkee/language">
             <i class="icon-cog icon-light"></i>
               Settings
           </a>
@@ -32,6 +40,7 @@
             <i class="icon-off icon-light"></i>
               Logout
           </button>
+          </form>
           <a class="donate-button" href="">Feed the monkkee</a>
         </div>
       </header>
