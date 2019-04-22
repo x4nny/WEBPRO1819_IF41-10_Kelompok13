@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/monkkee';
+$config['base_url'] = 'http://localhost/monkkee/WEBPRO1819_IF41-10_Kelompok13/';
 
 /*
 |--------------------------------------------------------------------------
@@ -195,8 +195,8 @@ $config['directory_trigger'] = 'd';
 | By default CodeIgniter enables access to the $_GET array.  If for some
 | reason you would like to disable it, set 'allow_get_array' to FALSE.
 |
-| WARNING: This feature is DEPRECATED and currently available only
 |          for backwards compatibility purposes!
+| WARNING: This feature is DEPRECATED and currently available only
 |
 */
 $config['allow_get_array'] = TRUE;
