@@ -3,6 +3,9 @@
 <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Life+Savers:400,700">
 <link rel="stylesheet" media="all" href="<?= base_url();?>assets/application-f8c5915810c4a1a465b0b0a2b7b1f7b5d6062d3052272c8c219405f6946bbf24.css">
 <script src="/assets/account/application-c89c14b286b5ee4eac9f974170afb61af89feaa5d00a85435704f995b985ab18.js"></script>
+<style>.cke{visibility:hidden;}
+body{height:100%;margin:0;padding:0;background-color:#333;background-image:url(<?= base_url();?>assets/dark_stripes_bg-a96b18c9fa271f9d8183fd4f4dd94cdcb6872b6fc2b029b79576ed1b6d3d2964.png)}
+footer .edge{background-image:url(<?= base_url();?>assets/dark_stripes_with_edge_bg-d617085f363420feef4fd9362a432af99b4f33c52b5addebfa0e9560ee328def.png);height:6px}</style>
 <script type="text/javascript">
   //<![CDATA[
     MONKKEE_APP_CONSTANTS = {
@@ -19,7 +22,7 @@
 <header class="clearfix">
 <div class="logo">
 <a href="/">
-<img alt="Logo" src="<?= base_url();?>assets/logo-f0892a4a253a67a010b482174e0e4a9f3d95eccc89e4c73422f09d6168df6b6b.png">
+<img alt="Logo" src="<?= base_url();?>assets/logo.png">
 <span id="logo-font"><span id="monkkee-monk">monk</span><span id="monkkee-kee">kee</span>
 </span>
 </a>
