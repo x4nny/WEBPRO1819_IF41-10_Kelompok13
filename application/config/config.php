@@ -23,11 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-<<<<<<< HEAD
-$config['base_url'] = 'http://localhost/monkkee/WEBPRO1819_IF41-10_Kelompok13/';
-=======
 $config['base_url'] = 'http://localhost:8080/monkkee';
->>>>>>> 1ed8743956e36cf5d7911e453e2a5b9cb397dc5a
 
 /*
 |--------------------------------------------------------------------------
