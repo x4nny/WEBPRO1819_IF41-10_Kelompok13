@@ -199,8 +199,7 @@ footer .edge{background-image:url(<?= base_url();?>assets/dark_stripes_with_edge
 
       <script src="/javascripts/ckeditor-4.5.7-mnk4/ckeditor.js"></script>
       <script src="/assets/footer_scripts-c365c106e29792cd3b5608d34958cc9d3eb025976648c370a5b23913b3f510b3.js"></script>
-
-
+      
   </body>
 </html>
 

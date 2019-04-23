@@ -33,9 +33,7 @@
   //]]>
 </script>
 <![endif]-->
-<style>.cke{visibility:hidden;}
-body{height:100%;margin:0;padding:0;background-color:#333;background-image:url(<?= base_url();?>assets/dark_stripes_bg-a96b18c9fa271f9d8183fd4f4dd94cdcb6872b6fc2b029b79576ed1b6d3d2964.png)}
-footer .edge{background-image:url(<?= base_url();?>assets/dark_stripes_with_edge_bg-d617085f363420feef4fd9362a432af99b4f33c52b5addebfa0e9560ee328def.png);height:6px}</style></head>
+<style>.cke{visibility:hidden;}</style></head>
 <body ng-class="bodyClass" class="desktop">
 <header class="clearfix">
 <div class="logo">
@@ -58,7 +56,7 @@ footer .edge{background-image:url(<?= base_url();?>assets/dark_stripes_with_edge
 <i class="icon-cog icon-light"></i>
 Settings
 </a>
-<button class="user-menu-btn" ng-click="logout($event)" href="<?=base_url();?>Auth/logout">
+<button class="user-menu-btn" ng-click="logout($event)">
 <i class="icon-off icon-light"></i>
 Logout
 </button>
@@ -78,16 +76,14 @@ Logout
 <div class="content-wrapper">
 <div class="content">
 <div class="login-wrapper">
-<?= $this->session->flashdata('message');?>
-<form action="<?php echo base_url('auth'); ?>" method="post">
+<form action="<?php echo base_url('auth/login'); ?>" method="post">
 <div class="ng-hide" ng-show="formStatus">
 
 </div>
 <div class="form-group ">
 <label class="control-label col-sm-3" for="login">User</label>
 <div class="col-sm-9">
-<input autocapitalize="none" autocomplete="off" class="form-control ng-pristine ng-valid" custom-autofocus="custom-autofocus" id="login" name="email" ng-change="resetErrorStatus()" ng-model="model.login" placeholder="Email address or alias" type="text" value="<?= set_value('email');?>">
-<?= form_error('email','<small class="text-danger pl-3">','</small>');?>
+<input autocapitalize="none" autocomplete="off" class="form-control ng-pristine ng-valid" custom-autofocus="custom-autofocus" id="login" name="email" ng-change="resetErrorStatus()" ng-model="model.login" placeholder="Email address or alias" type="text">
 <div class="help-block ng-binding">
 
 </div>

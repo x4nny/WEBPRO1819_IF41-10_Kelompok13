@@ -1,8 +1,8 @@
 <?php
 class Post_model extends CI_Model{
  
-    function save_post($berita,$id){
-        $hsl=$this->db->query("INSERT INTO post (content,id) VALUES ('$berita','$id')");
+    function save_post($jdl,$berita){
+        $hsl=$this->db->query("INSERT INTO post (title,content) VALUES ('$jdl','$berita')");
         return $hsl;
     }
  

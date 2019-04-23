@@ -38,8 +38,6 @@ class Post extends CI_Controller {
                 $this->image_lib->resize();
  
                 $gambar=$gbr['file_name'];
-                $data['user']=$this->db->get_where('user',['email' => $this->session->userdata('email')])->row_array();
-                $id=$data['user']['id'];
                 $jdl=$this->input->post('judul');
                 $berita=$this->input->post('berita');
  

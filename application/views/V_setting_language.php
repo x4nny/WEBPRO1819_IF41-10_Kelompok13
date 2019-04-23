@@ -20,7 +20,7 @@ footer .edge{background-image:url(<?= base_url();?>assets/dark_stripes_with_edge
 
   <body class="desktop">
 
-      <header class="clearfix">
+      <header class="clearfix" style="background: url(assets/img/bg-headfoot.png);">
         <div class="logo">
           <a href="#">
           <img alt="Logo" src="<?= base_url();?>assets/logo.png">
