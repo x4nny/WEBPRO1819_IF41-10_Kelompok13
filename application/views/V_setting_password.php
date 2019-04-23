@@ -6,6 +6,7 @@
 
     <!--insert font dan css-->
     <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic|Life+Savers:400,700|Playfair+Display:400italic">
+
     <link rel="stylesheet" type="text/css"  href="<?= base_url();?>assets/setting.css">
 
 

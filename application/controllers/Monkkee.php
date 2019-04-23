@@ -9,7 +9,7 @@ class Monkkee extends CI_Controller {
 
 
 	public function index(){
-		 $this->load->view('V_setting_language');
+		 $this->load->view('V_home');
 	}
 
 	public function language(){
